@@ -1,26 +1,24 @@
 package MODE_1.Character;
 
-public class WarriorCharacter extends Character{
+public class MageCharacter extends Character{
 
-    public WarriorCharacter(){
-        super(150, 15, 5, 10, 30);
+    public MageCharacter(){
+        super(150, 10, 5, 15, 100);
     }
 
-    
     public void specialAttack(Character target){
-
-        int manaCost = 15;
+        
+        int manaCost = 30;
 
         if (mana >= manaCost) {
             mana -= manaCost;
 
-            int damage = attack * 2;
+            int damage = attack * 3;
             target.takeDamage(damage);
 
-            System.err.println("The warrior's powerful attack !!");
+            System.err.println("Supreme fireball !! yaaa");
         }else{
             System.err.println("Not enough mana");
         }
     }
-    
 }

@@ -1,26 +1,23 @@
 package MODE_1.Character;
 
-public class WarriorCharacter extends Character{
-
-    public WarriorCharacter(){
-        super(150, 15, 5, 10, 30);
+public class ThiefCharacter extends Character{
+    public ThiefCharacter(){
+        super(150, 15, 10, 10, 40);
     }
 
-    
     public void specialAttack(Character target){
 
-        int manaCost = 15;
+        int manaCost = 30;
 
         if (mana >= manaCost) {
             mana -= manaCost;
 
-            int damage = attack * 2;
+            int damage = attack + 30;
             target.takeDamage(damage);
 
-            System.err.println("The warrior's powerful attack !!");
+            System.err.println("Hammer punch !!");
         }else{
             System.err.println("Not enough mana");
         }
     }
-    
 }

@@ -1,26 +1,23 @@
 package MODE_1.Character;
 
-public class WarriorCharacter extends Character{
-
-    public WarriorCharacter(){
-        super(150, 15, 5, 10, 30);
+public class ArcherCharacter extends Character{
+    public ArcherCharacter(){
+        super(150, 25, 20, 10, 20);
     }
 
-    
     public void specialAttack(Character target){
-
-        int manaCost = 15;
+        
+        int manaCost = 10;
 
         if (mana >= manaCost) {
             mana -= manaCost;
 
-            int damage = attack * 2;
+            int damage = attack + 20;
             target.takeDamage(damage);
 
-            System.err.println("The warrior's powerful attack !!");
+            System.err.println("Arrow volley");
         }else{
             System.err.println("Not enough mana");
         }
     }
-    
 }
