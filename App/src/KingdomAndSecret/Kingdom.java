@@ -14,7 +14,8 @@ public class Kingdom {
     public void subirDegats(int degats) {
         pointsVie -= degats;
         if (pointsVie < 0) pointsVie = 0;
-        System.out.println(nom + " subit " + degats + " degats -> PV restants : " + pointsVie);
+        System.out.println(nom + " subit " + degats +
+                " degats -> PV restants : " + pointsVie);
     }
 
     public void appliquerCorruption() {
@@ -25,8 +26,17 @@ public class Kingdom {
     }
 
     public void activerCorruption() {
-        this.corrompu = true;
-        System.out.println("Le Cristal Noir corrompt le royaume " + nom + " !");
+        if (!corrompu) {
+            corrompu = true;
+            System.out.println("Le Cristal Noir corrompt le royaume " + nom + " !");
+        }
+    }
+
+    public void desactiverCorruption() {
+        if (corrompu) {
+            corrompu = false;
+            System.out.println("La corruption est levée sur " + nom + " !");
+        }
     }
 
     public boolean estDetruit() {
@@ -38,7 +48,8 @@ public class Kingdom {
 
     @Override
     public String toString() {
-        return "Royaume[" + nom + " | PV=" + pointsVie + " | Corrompu=" + corrompu + "]";
+        return "Royaume[" + nom +
+                " | PV=" + pointsVie +
+                " | Corrompu=" + corrompu + "]";
     }
-
 }
