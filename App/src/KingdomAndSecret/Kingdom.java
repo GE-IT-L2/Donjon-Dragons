@@ -1,5 +1,5 @@
 package KingdomAndSecret;
 
-public class Royaume {
-
+public class Kingdom {
+    
 }
