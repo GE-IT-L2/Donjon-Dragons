@@ -1,4 +1,4 @@
-package MODE_1;
+package MODE_1.Character;
 
 import java.util.Random;
 
