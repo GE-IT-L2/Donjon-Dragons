@@ -1,4 +1,4 @@
-
+package MODE_1;
 public class Thief {
 
     // Fields
