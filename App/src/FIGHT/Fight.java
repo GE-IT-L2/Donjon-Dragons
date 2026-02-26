@@ -9,7 +9,7 @@ public class Fight {
         this.character1 = character1;
         this.character2 = character2;
     }
-
+    
     public void startFight(){
         while(character1.isAlive() && character2.isAlive()){
             if(character1.getSpeed() >= character2.getSpeed()){
