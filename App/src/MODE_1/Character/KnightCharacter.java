@@ -13,7 +13,7 @@ public class KnightCharacter extends Character{
             mana -= manaCost;
 
             this.defense += 5;
-            System.err.println("Increase defense");
+            System.err.println("Increase defense"); 
             
         }else{
             System.err.println("not enough mana");
