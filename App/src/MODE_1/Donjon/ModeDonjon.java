@@ -6,7 +6,7 @@ public class ModeDonjon {
 
     public static void main(String[] args) {
 
-        // Local Hero class as an anonymous subclass of Character
+        // Classe Héros local en tant que sous-classe anonyme de Character
         Character hero = new Character(100, 15, 10, 5, 30) {
             @Override
             public void specialAttack(Character target) {
@@ -16,7 +16,8 @@ public class ModeDonjon {
             }
         };
 
-        // Local Enemy class as an anonymous subclass of Character
+        // Classe **Ennemi local** en tant que **sous-classe anonyme de Character**.
+
         Character enemy = new Character(80, 12, 8, 3, 20) {
             @Override
             public void specialAttack(Character target) {
@@ -31,11 +32,11 @@ public class ModeDonjon {
 
         int round = 1;
 
-        // Battle loop
+        // Boucle de combat
         while (hero.isAlive() && enemy.isAlive()) {
             System.out.println("=== Round " + round + " ===");
 
-            // Whoever has higher speed attacks first
+            // Celui qui a la vitesse la plus élevée attaque en premier
             if (hero.getSpeed() >= enemy.getSpeed()) {
                 takeTurn(hero, enemy);
                 if (enemy.isAlive()) takeTurn(enemy, hero);
@@ -48,7 +49,7 @@ public class ModeDonjon {
             System.out.println();
         }
 
-        // Outcome
+        // Résultat.
         if (hero.isAlive()) {
             System.out.println("Hero wins the battle!");
         } else {
@@ -58,7 +59,7 @@ public class ModeDonjon {
         System.out.println("=== Dungeon Mode Ended ===");
     }
 
-    // Handle a single turn
+    // Gérer un seul tour
     private static void takeTurn(Character attacker, Character defender) {
         int choice = (int) (Math.random() * 3); // 0 = attack, 1 = defend, 2 = special
         switch (choice) {
