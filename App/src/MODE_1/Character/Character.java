@@ -124,5 +124,5 @@ public abstract class Character {
     // TO BE DEFINED BY EACH CLASS
     // ======================
 
-    public abstract void specialAttack(Character target);
+    public abstract void specialAttack(Enemy target);
 }

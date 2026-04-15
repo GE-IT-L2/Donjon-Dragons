@@ -5,7 +5,7 @@ public class ArcherCharacter extends Character{
         super(150, 25, 20, 10, 20);
     }
 
-    public void specialAttack(Character target){
+    public void specialAttack(Enemy target){
         
         int manaCost = 10;
 

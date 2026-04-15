@@ -7,7 +7,7 @@ public class WarriorCharacter extends Character{
     }
 
     
-    public void specialAttack(Character target){
+    public void specialAttack(Enemy target){
 
         int manaCost = 15;
 

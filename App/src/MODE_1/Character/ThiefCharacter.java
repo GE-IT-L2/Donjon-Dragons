@@ -5,7 +5,7 @@ public class ThiefCharacter extends Character{
         super(150, 15, 10, 10, 40);
     }
 
-    public void specialAttack(Character target){
+    public void specialAttack(Enemy target){
 
         int manaCost = 30;
 

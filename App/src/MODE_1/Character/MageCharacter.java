@@ -6,7 +6,7 @@ public class MageCharacter extends Character{
         super(150, 10, 5, 15, 100);
     }
 
-    public void specialAttack(Character target){
+    public void specialAttack(Enemy target){
         
         int manaCost = 30;
 

@@ -5,7 +5,7 @@ public class KnightCharacter extends Character{
         super(150, 15, 5, 10, 30);
     }
 
-    public void specialAttack(Character target){
+    public void specialAttack(Enemy target){
 
         int manaCost = 15;
 
