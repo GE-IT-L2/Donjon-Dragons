@@ -38,9 +38,17 @@ public class Royaume {
         return pointsVie <= 0;
     }
 
-    public boolean isCorrompu() { return corrompu; }
-    public int getPointsVie() { return pointsVie; }
-    public String getNom() { return nom; }
+    public boolean isCorrompu() {
+        return corrompu;
+    }
+
+    public int getPointsVie(){
+        return pointsVie;
+    }
+
+    public String getNom() {
+        return nom;
+    }
 
     @Override
     public String toString() {
