@@ -1,5 +1,6 @@
 package MODE_1.Character;
 
+
 public class ArcherCharacter extends Character{
     public ArcherCharacter(){
         super(150, 25, 20, 10, 20);

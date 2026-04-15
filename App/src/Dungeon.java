@@ -1,5 +1,9 @@
 import MODE_1.Character.Character;
-import MODE_1.Character.*;
+import MODE_1.Character.Goblin;
+import MODE_1.Character.Skeleton;
+import MODE_1.Character.DarkKnight;
+import MODE_1.Character.BossShadowLord;
+import MODE_1.Character.Room;
 
 import java.util.*;
 

@@ -1,5 +1,8 @@
-import MODE_1.Character.*;
 import MODE_1.Character.Character;
+import MODE_1.Character.ArcherCharacter;
+import MODE_1.Character.KnightCharacter;
+import MODE_1.Character.MageCharacter;
+import MODE_1.Character.WarriorCharacter;
 
 import java.util.*;
 
