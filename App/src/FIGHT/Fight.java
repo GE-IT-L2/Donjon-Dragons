@@ -1,4 +1,6 @@
 package FIGHT;
+import java.util.Scanner;
+
 import MODE_1.Character;
 
 public class Fight {
@@ -44,13 +46,17 @@ public class Fight {
     }
 
     private void playTurn(Character attacker, Character defender) {
-    if (Math.random() < 0.7) {
+    Scanner scanner = new Scanner(System.in);
 
+    System.out.println("1: Attack | 2: Defend");
+    int choice = scanner.nextInt();
+
+    if (choice == 1) {
         attacker.attack(defender);
     } else {
-        
         attacker.defend();
     }
+    scanner.close();
 }
 
     private void displayStatus() {
