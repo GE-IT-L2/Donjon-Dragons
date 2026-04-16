@@ -4,20 +4,12 @@ import MODE_1.Character.Character;
 
 public class ModeDonjon {
 
-    public static void main(String[] args) {
-
-        // Classe Héros local en tant que sous-classe anonyme de Character
-        Character hero = new Character(100, 15, 10, 5, 30) {
-            @Override
-            public void specialAttack(Character target) {
-                int damage = this.getAttack() * 2;
-                target.takeDamage(damage);
-                System.out.println("Hero uses Mighty Strike for " + damage + " damage!");
-            }
-        };
-
-        // Classe **Ennemi local** en tant que **sous-classe anonyme de Character**.
-
+    /**
+     * pour lancer ton mode avec le personnage choisi par l'utilisateur.
+     */
+    public void demarrer(Character hero) {
+        
+        // --- 1. CRÉATION DE L'ENNEMI ---
         Character enemy = new Character(80, 12, 8, 3, 20) {
             @Override
             public void specialAttack(Character target) {
@@ -32,7 +24,7 @@ public class ModeDonjon {
 
         int round = 1;
 
-        // Boucle de combat
+        // --- 2. BOUCLE DE COMBAT 
         while (hero.isAlive() && enemy.isAlive()) {
             System.out.println("=== Round " + round + " ===");
 
@@ -49,7 +41,7 @@ public class ModeDonjon {
             System.out.println();
         }
 
-        // Résultat.
+        // --- 3. RÉSULTAT DU COMBAT ---
         if (hero.isAlive()) {
             System.out.println("Hero wins the battle!");
         } else {
@@ -59,7 +51,9 @@ public class ModeDonjon {
         System.out.println("=== Dungeon Mode Ended ===");
     }
 
-    // Gérer un seul tour
+    /**
+     * Gère un seul tour d'attaque/défense
+     */
     private static void takeTurn(Character attacker, Character defender) {
         int choice = (int) (Math.random() * 3); // 0 = attack, 1 = defend, 2 = special
         switch (choice) {
@@ -76,5 +70,22 @@ public class ModeDonjon {
                 attacker.specialAttack(defender);
                 break;
         }
+    }
+
+    
+    public static void main(String[] args) {
+        // Simulation d'un héros pour le test
+        Character testHero = new Character(100, 15, 10, 5, 30) {
+            @Override
+            public void specialAttack(Character target) {
+                int damage = this.getAttack() * 2;
+                target.takeDamage(damage);
+                System.out.println("Hero uses Mighty Strike for " + damage + " damage!");
+            }
+        };
+
+        // Lancement du test
+        ModeDonjon dungeon = new ModeDonjon();
+        dungeon.demarrer(testHero);
     }
 }
