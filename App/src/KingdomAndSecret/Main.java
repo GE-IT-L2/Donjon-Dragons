@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-C
+
         System.out.println("=== MENU PRINCIPAL ===");
         System.out.println("1. Mode Royaume");
         System.out.println("2. Mode Secret");
